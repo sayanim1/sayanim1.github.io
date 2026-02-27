@@ -1,0 +1,26 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 80px; /* space for fixed navbar */
+}
+
+.page-container {
+  min-height: calc(100vh - 140px);
+}
+
+h1,
+h2,
+h5 {
+  letter-spacing: 0.03em;
+}
+
+.navbar-brand {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-weight: 600;
+}

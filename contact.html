@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Your Name</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Your Name</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="experience.html">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="education.html">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="achievements.html">
+                Achievements
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="py-5">
+      <div class="container page-container">
+        <h1 class="mb-4 text-center">Contact</h1>
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <p class="text-center mb-4">
+              I’m actively open to roles in backend engineering,
+              machine learning, and applied research. Feel free to
+              reach out.
+            </p>
+            <ul class="list-unstyled text-center mb-4">
+              <li class="mb-1">
+                <strong>Email:</strong>
+                <a href="mailto:you@example.com">you@example.com</a>
+              </li>
+              <li class="mb-1">
+                <strong>LinkedIn:</strong>
+                <a
+                  href="https://www.linkedin.com/in/your-linkedin"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  linkedin.com/in/your-linkedin
+                </a>
+              </li>
+              <li>
+                <strong>GitHub:</strong>
+                <a
+                  href="https://github.com/your-github"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  github.com/your-github
+                </a>
+              </li>
+            </ul>
+
+            <!-- Optional basic form (non-functional without backend) -->
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="you@example.com"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="How can I help?"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary w-100"
+                disabled
+                title="Form is static; contact via email or LinkedIn."
+              >
+                Send (disabled – use email above)
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-3 bg-dark text-light">
+      <div class="container text-center">
+        <small>© <span id="year"></span> Sayani Mallick</small>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <script>
+      document.getElementById("year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>

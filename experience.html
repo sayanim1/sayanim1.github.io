@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Experience | Your Name</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar (Experience active) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Your Name</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="experience.html">
+                Experience
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="education.html">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="achievements.html">
+                Achievements
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="py-5">
+      <div class="container page-container">
+        <h1 class="mb-4 text-center">Experience</h1>
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <!-- Role 1 -->
+            <div class="mb-4">
+              <div class="d-flex justify-content-between">
+                <h5 class="mb-1">Software Development Engineer</h5>
+                <span class="text-muted">Company • 20XX – 20XX</span>
+              </div>
+              <p class="mb-1 text-muted">Location • Team / Domain</p>
+              <ul class="mb-0">
+                <li>
+                  Designed and implemented scalable backend services
+                  using Java/Python, improving reliability and
+                  reducing latency for high‑traffic user flows.
+                </li>
+                <li>
+                  Built data pipelines and experimentation tooling
+                  to evaluate ML models in production.
+                </li>
+                <li>
+                  Collaborated with cross‑functional stakeholders to
+                  translate product requirements into technical
+                  designs.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Role 2 -->
+            <div class="mb-4">
+              <div class="d-flex justify-content-between">
+                <h5 class="mb-1">Graduate Researcher</h5>
+                <span class="text-muted">
+                  Lab / University • 20XX – Present
+                </span>
+              </div>
+              <p class="mb-1 text-muted">
+                Location • ML / AI Research
+              </p>
+              <ul class="mb-0">
+                <li>
+                  Developed models for [brief problem statement],
+                  focusing on robustness, interpretability, or
+                  efficiency.
+                </li>
+                <li>
+                  Prototyped and evaluated architectures for
+                  computer vision and NLP tasks on real‑world
+                  datasets.
+                </li>
+                <li>
+                  Communicated findings through reports,
+                  presentations, and code artifacts.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-3 bg-dark text-light">
+      <div class="container text-center">
+        <small>© <span id="year"></span> Sayani Mallick</small>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <script>
+      document.getElementById("year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
