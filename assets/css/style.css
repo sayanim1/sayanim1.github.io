@@ -24,3 +24,138 @@ h5 {
 .card-title {
   font-weight: 600;
 }
+
+/* Timeline layout */
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+}
+
+/* Main vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #dee2e6;
+}
+
+/* Each item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 2.5rem;
+}
+
+/* Marker dot */
+.timeline-marker {
+  position: absolute;
+  left: 4px;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #0d6efd33;
+}
+
+/* Card container */
+.timeline-content {
+  position: relative;
+}
+
+/* Connector from line to card (mobile / narrow) */
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  top: 28px;
+  width: 1.5rem;
+  height: 2px;
+  background-color: #dee2e6;
+}
+
+/* Desktop: center line and alternate sides with connectors */
+@media (min-width: 768px) {
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    width: 50%;
+    padding-left: 0;
+  }
+
+  /* Odd items on the right */
+  .timeline-item:nth-child(odd) {
+    margin-left: 50%;
+    padding-left: 2.5rem;
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-marker {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content::before {
+    left: -2.5rem;
+    right: auto;
+  }
+
+  /* Even items on the left */
+  .timeline-item:nth-child(even) {
+    padding-right: 2.5rem;
+    text-align: right;
+  }
+
+  .timeline-item:nth-child(even) .timeline-marker {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item:nth-child(even) .timeline-content::before {
+    right: -2.5rem;
+    left: auto;
+  }
+
+  /* Connector line (desktop) */
+  .timeline-content::before {
+    top: 28px;
+    width: 2.5rem;
+    height: 2px;
+    background-color: #dee2e6;
+  }
+}
+
+/* Base card styling for timeline */
+.timeline-content.card {
+  border: 1px solid #e0e4ec;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #ffffff, #fafbff);
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease, background 0.15s ease;
+}
+
+/* Hover effect */
+.timeline-content.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  border-color: #c5d0ff;
+  background: linear-gradient(135deg, #ffffff, #f3f5ff);
+}
+
+/* Optional: emphasize headings inside timeline cards */
+.timeline-content .card-title,
+.timeline-content h5 {
+  font-weight: 600;
+}
+
+/* Optional: make the date text slightly smaller and lighter */
+.timeline-content .text-muted {
+  font-size: 0.9rem;
+}
