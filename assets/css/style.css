@@ -159,3 +159,61 @@ h5 {
 .timeline-content .text-muted {
   font-size: 0.9rem;
 }
+
+/* Updates timeline (date + text) */
+.updates-timeline {
+  position: relative;
+  margin: 1rem 0 0;
+  padding-left: 1.5rem;
+}
+
+.updates-timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #dee2e6;
+}
+
+.updates-item {
+  position: relative;
+  padding: 0.75rem 0 0.75rem 1.5rem;
+}
+
+.updates-item::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 1.1rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #0d6efd33;
+}
+
+.updates-date {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #495057;
+  margin-bottom: 0.15rem;
+}
+
+.updates-content {
+  font-size: 0.95rem;
+  color: #343a40;
+}
+
+/* Optional: slightly smaller on mobile */
+@media (max-width: 575.98px) {
+  .updates-timeline {
+    padding-left: 1.25rem;
+  }
+  .updates-item {
+    padding-left: 1.25rem;
+  }
+}
